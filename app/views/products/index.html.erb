@@ -1,0 +1,13 @@
+<h1>My Cart:</h1>
+
+<ol>
+  <% cart.each do |product| %>
+    <li><%= product %> </li>
+  <% end %>
+</ol>
+
+<%= form_tag '/', {method: :patch} do%>
+  <%= text_field_tag :product %>
+  <%= submit_tag "add to cart", name: nil %>
+
+<% end %>
